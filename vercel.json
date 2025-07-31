@@ -1,13 +1,17 @@
 {
   "functions": {
-    "api/*.php": {
-      "runtime": "vercel-php@0.6.0"
+    "api/mef.php": {
+      "runtime": "vercel-php@0.7.0"
     }
   },
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
+      "src": "/api/mef",
+      "dest": "/api/mef.php"
+    },
+    {
+      "src": "/api/mef/(.*)",
+      "dest": "/api/mef.php"
     }
   ]
 }
